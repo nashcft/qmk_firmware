@@ -19,16 +19,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | LCtrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|  ' / " |
  * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
- * | = / +  |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  |   [    |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  |   [    |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | Grv  |  '"  |AltShf| LGui |BkSpc |                                       | Left | Down |  Up  | Right|   ]  |
+ *   | Grv  |  '"  |AltShf| LGui |  =+  |                                       | Left | Down |  Up  | Right|   ]  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | App  | LGui |       | Alt  |Ctrl/Esc|
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
- *                                 |Space |LShift|------|       |------| RShift |Enter |
- *                                 |      |      | End  |       | PgDn |        |      |
+ *                                 |Space |BackSp|------|       |------| RShift |Enter |
+ *                                 |      |ace   | End  |       | PgDn |        |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -38,11 +38,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_DELT,   KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_LEFT,
         KC_TAB,   KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   TG(1),
         KC_LCTL,  KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
-        KC_EQL,   KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   ALL_T(KC_NO),
-        KC_GRV,   KC_QUOT,      LALT(KC_LSFT),  KC_LGUI,KC_BSPC,
+        KC_LSFT,  KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   ALL_T(KC_NO),
+        KC_GRV,   KC_QUOT,      LALT(KC_LSFT),  KC_LGUI,KC_EQL,
                                               ALT_T(KC_APP),  KC_LGUI,
                                                               KC_HOME,
-                                              KC_SPC, KC_LSFT,KC_END,
+                                              KC_SPC, KC_BSPC,KC_END,
         // right hand
              KC_RGHT,     KC_6,   KC_7,   KC_8,   KC_9,   KC_0,             KC_MINS,
              TG(1),       KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
